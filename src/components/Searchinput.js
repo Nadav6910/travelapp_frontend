@@ -19,11 +19,13 @@ export default function Searchinput(props) {
     }, [props, searchInputValueFrom, searchInputValueTo])
 
     const { ref: fromRef } = usePlacesWidget({
+        language: "en",
         apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         onPlaceSelected: (place) => SetSearchInputValueFrom(place.formatted_address)
       })
  
     const { ref: toRef } = usePlacesWidget({
+        language: "en",
         apiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         onPlaceSelected: (placeTo) => SetSearchInputValueTo(placeTo.formatted_address)
     })

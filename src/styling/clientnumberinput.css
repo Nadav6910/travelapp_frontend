@@ -429,6 +429,20 @@
     }
 }
 
+@media screen and (max-width: 392px) {
+    .select-number-container{
+        left: 5.5rem;
+        top: 17.3rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .select-number-container{
+        left: 5rem;
+        top: 18.6rem;
+    }
+}
+
 @media screen and (min-width: 521px) and (max-width: 522px) {
     .select-number-container{
         top: 14.6rem;
