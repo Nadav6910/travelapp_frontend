@@ -36,7 +36,7 @@ hr {
     text-align: center;
 }
 
-.css-9y1egq-MuiButtonBase-root-MuiButton-root.search-btn{
+.MuiButton-root.search-btn{
     display: inline-block;
     position: relative;
     margin-left: 4px;
@@ -47,7 +47,7 @@ hr {
     height: calc(40px)
 }
 
-.css-9y1egq-MuiButtonBase-root-MuiButton-root.search-btn:hover{
+.MuiButton-root.search-btn:hover{
     border-color: #ED6C02;
 }
 
@@ -362,12 +362,12 @@ hr {
     white-space: nowrap;
 }
 
-.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.more-results-btn.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+.MuiButton-root.more-results-btn{
     margin-top: 1.6rem;
     color: #26479f;
 }
 
-button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.return-to-search-btn.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+button.MuiButton-root.return-to-search-btn{
     color: #ed6b04;
     background-color: #3859af;
     float: right;
@@ -376,13 +376,13 @@ button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.
     margin-top: -0.25rem;
 }
 
-button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButtonBase-root.return-to-search-btn.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover{
+button.MuiButton-root.return-to-search-btn:hover{
     background-color: #5574c2;
 }
 
 
 @media screen and (max-width: 944px) {
-    .css-9y1egq-MuiButtonBase-root-MuiButton-root.search-btn{
+    .MuiButton-root.search-btn{
         display: block;
         margin: auto;
     }
@@ -400,7 +400,7 @@ button.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.
       margin-bottom: 2.3rem;
     }
 
-    .css-9y1egq-MuiButtonBase-root-MuiButton-root.search-btn{
+    .MuiButton-root.search-btn{
         display: block;
         margin: auto;
     }
