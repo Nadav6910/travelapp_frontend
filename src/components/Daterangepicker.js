@@ -73,7 +73,7 @@ export default function DateRangePicker(props) {
     return (
         <div className="datepicker">
             <Space direction="vertical" size={12}>
-                <RangePicker value={[StartDateInput, EndDateInput]} onChange={UpdateDates} disabledDate={disabledDate} size="large" className="range-picker"/>
+                <RangePicker inputReadOnly value={[StartDateInput, EndDateInput]} onChange={UpdateDates} disabledDate={disabledDate} size="large" className="range-picker"/>
             </Space>
         </div>
     )
