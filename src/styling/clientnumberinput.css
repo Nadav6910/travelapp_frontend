@@ -1,0 +1,436 @@
+:root {
+    --upvalue: 5px;
+    --downvalue: 50px;
+  }
+
+.client-number-container{
+    display: inline-block;
+    margin-left: 1px;
+}
+
+.client-number-container i {
+    display: inline-block;
+    position:relative;
+    left:-2px;
+    padding:10px 10px;
+    margin-left: 2px;
+    color:#d9d9d9;
+    font-size: small;
+   }
+
+.number-input{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: -2.2rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.85);
+    transition: border 0.3s, box-shadow 0.3s;
+    font-feature-settings: 'tnum', "tnum";
+    line-height: 1.5715;
+    padding: 6.5px 11px 6.5px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: 420;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.number-input:hover{
+    border-color: #ED6C02;
+    cursor: pointer;
+}
+
+.number-input:focus{
+    outline: 1px solid #ED6C02;
+}
+
+.select-number-container{
+    position: relative;
+    height: 165px;
+    width: 210px;
+    left: 3px;
+    margin-top: 5px;
+    background-color: #f7f4f4;
+    box-shadow: 11px 11px 20px rgb(185 184 184);
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in {
+    from {
+        margin-top: var(--downvalue);
+        opacity: 0.1;
+      }
+    
+      to {
+        margin-top: var(--upvalue);
+        opacity: 1;
+      }
+  }
+
+@keyframes fade-out {
+    from {
+        margin-top: var(--upvalue);
+        opacity: 1;
+      }
+    
+      to {
+        margin-top: var(--downvalue);
+        opacity: 0.1;
+      }
+  }
+
+.select-number-container:hover{
+    cursor: default;
+}
+
+.adults-span-container{
+    position: relative;
+    top: 20%;
+    right: 20%;
+}
+
+.children-span-container{
+    position: relative;
+    top: 18%;
+    right: 15.1%;
+}
+
+.adults-span{
+    display: inline;
+    position: relative;
+    right: 8px;
+    color: #969292;
+}
+
+.children-span{
+    display: inline;
+    color: #969292;
+    position: relative;
+    left: 4px;
+}
+
+.line-break{
+    position: relative;
+    top: 26%;
+    color: #969292;
+}
+
+.remove-icon{
+    position: relative;
+    color: #969292;
+    left: 23%;
+}
+
+.add-icon{
+    position: relative;
+    color: #969292;
+    left: 43%;
+}
+
+.remove-icon:hover{
+    cursor: pointer;
+    color: #a7a0a0;
+}
+
+.add-icon:hover{
+    cursor: pointer;
+    color: #bdb4b4;
+}
+
+.adults-selected{
+    position: relative;
+    color: #bdb4b4;
+    left: 33%;
+}
+
+.choose-child-age-container{
+    display: none;
+    position: relative;
+    left: 45px;
+}
+
+.choose-age-dropdown{
+    cursor: pointer;
+    color: #969292;
+}
+
+.choose-age{
+    display: inline-block;
+    position: relative;
+    color: #969292;
+    margin-right: 5px;
+}
+
+.chosen-children-ages-container{
+    position: relative;
+    display: none;
+    left: 162px;
+    bottom: 30px;
+    height: 118px;
+    width: 100px;
+    background-color: #f7f4f4;
+    box-shadow: 11px 11px 20px rgb(185 184 184);
+    grid-template-columns: repeat(3, 33px [col-start]);
+    grid-template-rows: repeat(3, 28px [col-start]);
+    animation-name: fade-in-ages;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-in-ages {
+    from {
+        transform: scale(0) rotate(0deg);
+      }
+    
+      to {
+        transform: scale(1) rotate(0.1deg);
+      }
+  }
+
+@keyframes fade-out-ages {
+    from {
+        transform: scale(1) rotate(0deg);
+      }
+    
+      to {
+        transform: scale(0) rotate(0deg);
+      }
+  }
+
+.child-age-preview{
+    display: grid;
+    justify-self: center;
+    color: #fff;
+    background-color: #3DB2FF;
+    width: 25px;
+    text-align: center;
+    align-self: center;
+    border-radius: 6px;
+    margin-top: 2px;
+}
+
+.p-hr-container{
+    display: grid;
+    font-size: small;
+    grid-column-start: span 3;
+    color: #969292;
+    align-self: center;
+    margin: 0;
+}
+
+ .choosen-children-p{
+    margin: 0;
+    margin-left: 4px;
+}
+
+.line-break-chosen-children{
+    display: grid;
+    grid-column-start: span 3;
+    align-self: start;
+    margin: 0;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 0.1rem;
+} 
+
+.child-age-preview:hover{
+    cursor: pointer;
+    background-color: #0e507c;
+}
+
+.cross-symbol{
+    position: relative;
+    height: 24px;
+    width: 24px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cross-symbol::before, .cross-symbol::after{
+    display: none;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    opacity: 0.6;
+    background-color: rgba(158, 151, 151, 0.815);
+}
+
+.cross-symbol::before{
+    transform: rotate(45deg);
+}
+
+.cross-symbol::after{   
+    transform: rotate(-45deg);
+}
+
+.open-child-ages-container-icon-div{
+    display: inline-block;
+    position: relative;
+    left: 67px;
+    top: 27px;
+}
+
+.fas.fa-user.open-child-container-icon{
+    margin-left: 0;
+    color: #969292;
+}
+
+.fas.fa-user.open-child-container-icon-animated{
+    margin-left: 0;
+    color: #969292;
+    animation-name: zoom;
+    animation-duration: 1s;
+}
+
+@keyframes zoom {
+  0%   {transform:scale(1)} 
+  10%  {transform:scale(1.2)} 
+  20%  {transform:scale(1.5)} 
+  30% {transform:scale(1.7)}
+  40% {transform:scale(2)}
+  50% {transform:scale(1.7)}
+  60% {transform:scale(1.5)} 
+  70% {transform:scale(1.2)} 
+  80% {transform:scale(1)} 
+  90% {transform:scale(1)} 
+  100% {transform:scale(1)}       
+}
+
+.fas.fa-user.open-child-container-icon:hover{
+    color: #bdb4b4;
+    cursor: pointer;
+}
+
+.fas.fa-user.open-child-container-icon-animated:hover{
+    color: #bdb4b4;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 944px) {
+    .select-number-container{
+        position: fixed;
+        margin-left: 0.2rem;
+        left: unset;
+    }
+}
+
+@media screen and (max-width: 944px) and (min-width: 834px) {
+    .chosen-children-ages-container{
+        left: -165px;
+    }
+}
+
+@media screen and (min-width: 523px) and (max-width: 944px) {
+    .number-input{
+        width: 18.8rem;
+        letter-spacing: 0.05rem;
+        padding: 6.5px 55px 6.5px;
+    }
+
+    .client-number-container{
+        margin-right: 0.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .select-number-container{
+        position: fixed;
+        z-index: 1;
+        top: 18.5rem;
+        left: 29%;
+        margin: auto;
+    }
+
+    :root {
+        --upvalue: 0px;
+        --downvalue: -100px;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .number-input{
+        width: 18.8rem;
+        margin-right: -2rem;
+        letter-spacing: 0.05rem;
+        padding: 6.5px 55px 6.5px;
+    }
+
+    .client-number-container{
+        margin-bottom: 1rem;
+    }
+
+    .select-number-container{
+        position: fixed;
+        z-index: 1;
+        top: 16rem;
+        left: 29%;
+        margin: auto;
+    }
+
+    :root {
+        --upvalue: 0px;
+        --downvalue: -100px;
+    }
+}
+
+@media screen and (min-width: 545px) and (max-width: 615px) {
+    .select-number-container{
+        left: 32%;
+    }
+}
+
+@media screen and (min-width: 616px) and (max-width: 645px) {
+    .select-number-container{
+        left: 32%;
+        top: 17.3rem;
+    }
+}
+
+@media screen and (min-width: 645px) and (max-width: 750px) {
+    .select-number-container{
+        left: 35%;
+        top: 17.3rem;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 895px) {
+    .select-number-container{
+        left: 35%;
+        top: 17.3rem;
+    }
+}
+
+@media screen and (min-width: 896px) and (max-width: 944px) {
+    .select-number-container{
+        left: 37%;
+        top: 17.3rem;
+    }
+}
+
+@media screen and (min-width: 897px) and (max-width: 944px) {
+    .select-number-container{
+        top: 16rem;
+    }
+}
+
+@media screen and (min-width: 780px) and (max-width: 895px) {
+    .select-number-container{
+        left: 38%;
+        
+    }
+}
+
+@media screen and (max-width: 443px) {
+    .select-number-container{
+        left: 25%;
+    }
+}
+
+@media screen and (min-width: 521px) and (max-width: 522px) {
+    .select-number-container{
+        top: 14.6rem;
+    }
+}

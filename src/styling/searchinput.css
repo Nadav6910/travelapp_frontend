@@ -1,0 +1,60 @@
+.search-input-container{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1px;
+    min-width: 219.438;
+
+}
+
+.search-input-container i {
+    display: inline-block;
+    position:relative;
+    left:-2px;
+    padding:10px 10px;
+    padding-right: 8px;
+    margin-left: 2px;
+    color:#d9d9d9;
+    font-size: small;
+   }
+
+.search-input-from, .search-input-to{
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: -2.2rem;
+    margin-left: -0.02rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    background: #fff;
+    transition: border 0.3s, box-shadow 0.3s;
+    font-feature-settings: 'tnum', "tnum";
+    line-height: 1.5715;
+    padding: 6.5px 11px 6.5px;
+    padding-right: 30px;
+    font-size: 16px;
+    font-weight: 420;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.search-input-from:hover, .search-input-to:hover{
+    border-color: #ED6C02;
+}
+
+.search-input-from:focus, .search-input-to:focus{
+    outline: 1px solid #ED6C02;
+}
+
+.search-input-from::placeholder, .search-input-to::placeholder{
+    color: #d9d9d9;
+}
+
+.fa-times-circle{
+    min-width: 15px;
+    width: 2.17rem;
+}
+
+.fa-times-circle:hover{
+    cursor: pointer;
+    color: #a7a0a0;
+}

@@ -1,0 +1,64 @@
+.range-picker:hover{
+    border-color: #ED6C02;
+}
+
+.range-picker:focus{
+    outline: 1px solid #ED6C02;
+    box-shadow: #ED6C02;
+}
+
+.datepicker{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ant-picker-range-separator{
+    margin-right: 15px;
+    margin-bottom: 6px;
+}
+
+.ant-picker-input{
+    left: 10px;
+}
+
+.ant-picker-input:hover{
+    left: 10px;
+}
+
+.ant-picker-focused{
+    box-shadow: none;
+    border-color: #ED6C02;
+}
+
+.ant-picker-range .ant-picker-active-bar{
+    background-color: #ED6C02;
+}
+
+@media screen and (max-width: 944px) {
+    .datepicker{
+        margin-bottom: 1rem;
+    }
+  }
+
+@media screen and (min-width: 523px) and (max-width: 944px) {
+    .datepicker{
+        display: block;
+        width: 18.8rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.15rem;
+        margin-left: 0.09rem;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    .ant-picker-panel-container .ant-picker-panels {
+        display: inline-grid;
+        flex-wrap: wrap;
+    }
+
+    .datepicker{
+        width: 18.8rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.15rem;
+    }
+  }

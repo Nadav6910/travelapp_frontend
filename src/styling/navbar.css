@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
+.navbar-container{
+    background-color: #2647A0;
+    height: 130px;
+    position: relative;
+    text-align: left;
+}
+
+.app-logo{
+    margin-left: 10px;
+    padding: 2px;
+    top: 50%;
+    position: absolute;
+    display: inline;
+    transform: translate(0, -50%)
+}
+
+.app-icon{
+    margin-bottom: 12px;
+}
+
+.app-logo h1{
+    color: #ED6C02;
+    display: inline;
+    margin-left: 2px;
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+@media screen and (max-width: 870px) {
+    .app-logo h1{
+        font-size: 35px;
+    }
+  }
+
+  @media screen and (max-width: 404px) {
+    .navbar-container{
+        width: 46rem;
+    }
+  }

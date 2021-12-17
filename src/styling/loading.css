@@ -1,0 +1,15 @@
+.loading-div{
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+}
+
+.loading-header{
+    color: #ada8a8;
+    padding: 2rem;
+}
+
+.cssfx-filling-bottle {
+    position: relative;
+    left: 37%;
+}
