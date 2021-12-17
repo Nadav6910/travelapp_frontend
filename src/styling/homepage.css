@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
-html, body {
-    overflow-x: hidden;
-  }
-
 .app-body > #root > .app > .homepage > .offers-container > .flight-offer > *:not(.info-window) {
     filter: blur(2px);
   }
@@ -400,7 +396,7 @@ button.MuiButton-root.return-to-search-btn:hover{
 
 @media screen and (max-width: 522px) {
     .about-us {
-      margin-top: 1.2rem;
+      margin-top: 3rem;
       margin-bottom: 2.3rem;
     }
 
@@ -409,6 +405,12 @@ button.MuiButton-root.return-to-search-btn:hover{
         margin: auto;
     }
   }
+
+@media screen and (max-width: 392px) {
+    .about-us {
+        margin-top: 1.2rem;
+      }
+}
 
 @media screen and (min-width: 641px) and (max-width: 795px) {
     .flight-offer{

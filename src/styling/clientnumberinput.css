@@ -432,14 +432,14 @@
 @media screen and (max-width: 392px) {
     .select-number-container{
         left: 5.5rem;
-        top: 17.3rem;
+        top: 15.5rem;
     }
 }
 
 @media screen and (max-width: 380px) {
     .select-number-container{
         left: 5rem;
-        top: 18.6rem;
+        top: 17rem;
     }
 }
 
