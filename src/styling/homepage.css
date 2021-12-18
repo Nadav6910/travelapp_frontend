@@ -455,7 +455,47 @@ button.MuiButton-root.return-to-search-btn:hover{
     }
 }
 
-@media screen and (min-width: 405px) and (max-width: 641px) {
+@media screen and (min-width: 372px) and (max-width: 500px){
+    .airline-span{
+        font-size: 0.55rem;
+    }
+}
+
+@media screen and (max-width: 402px) {
+    .flight-line{
+        width: 3.5rem;
+    }
+
+    .first-flight-container.one-stop > .vl, .return-flight-container.one-stop > .vl{
+        left: -0.4rem !important;
+    }
+
+    .time-destenation{
+        left: 4.6rem !important;
+    }
+
+    .IATA-code-destenation{
+        left: 6rem !important;
+    }
+
+    .IATA-code-destenation.no-stops{
+        left: 7rem !important;
+    }
+
+    .return-flight-container.two-stops > .vl-container > .vl, .first-flight-container.two-stops > .vl-container > .vl{
+        right: 1rem !important;
+    }
+
+    .return-flight-container.two-stops > .vl-container > .vl2, .first-flight-container.two-stops > .vl-container > .vl2{
+        left: 0.2rem !important;
+    }
+
+    .fas{
+        right: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 372px) and (max-width: 641px) {
     .first-flight-container{
         padding-left: 0;
         padding-right: 0;
@@ -515,7 +555,7 @@ button.MuiButton-root.return-to-search-btn:hover{
     }
 
     .IATA-code-origin{
-        right: 17%;
+        right: 3rem;
     }
 
     .IATA-code-destenation{
@@ -559,7 +599,7 @@ button.MuiButton-root.return-to-search-btn:hover{
     }
 
     .flight-line{
-        right: 18%;
+        right: 3.2rem;
     }
 
     i.fa-plane-arrival.fas{

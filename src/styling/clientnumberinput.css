@@ -324,6 +324,13 @@
     }
 }
 
+@media screen and (max-width: 429px) {
+    .chosen-children-ages-container{
+        left: unset;
+        bottom: 14.8rem;
+    }
+}
+
 @media screen and (min-width: 523px) and (max-width: 944px) {
     .number-input{
         width: 18.8rem;
