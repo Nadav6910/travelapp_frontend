@@ -412,9 +412,19 @@ button.MuiButton-root.return-to-search-btn:hover{
       }
 }
 
+@media screen and (min-width: 697px) and (max-width: 701px){
+    .first-flight-container{
+        padding-left: 3.6rem;
+    }
+
+    .return-flight-container{
+        padding-left: 3.6rem;
+    }
+}
+
 @media screen and (min-width: 641px) and (max-width: 795px) {
     .flight-offer{
-        grid-template-columns: min-content;
+        grid-template-columns: auto 1fr;
     }
 
     .first-flight-container{
@@ -491,7 +501,7 @@ button.MuiButton-root.return-to-search-btn:hover{
     }
 
     .fas{
-        right: 2.5rem;
+        right: 2.7rem;
     }
 }
 
@@ -569,7 +579,7 @@ button.MuiButton-root.return-to-search-btn:hover{
     }
 
     .fas{
-        right: 15%;
+        right: 2.7rem;
     }
 
     .first-flight-container.two-stops > .vl-container > .vl{

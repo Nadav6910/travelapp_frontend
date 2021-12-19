@@ -162,7 +162,7 @@ export default function Flightresults(props) {
                   .split('T')[0].slice(2,4))}</span>
 
                   <span className="IATA-code-origin">{offer.slices[0].segments[0].origin.iata_city_code}</span>
-                  <i className="fas fa-plane-departure" style={{right: offer.slices[0].segments.length === 1 && "2.7rem"}}></i>
+                  <i className="fas fa-plane-departure"></i>
                   
                   {/* cheaking if there is one stop two stops or no stops and creating the stop line for the first flight */}
                   {offer.slices[0].segments.length === 1 ?
@@ -262,7 +262,7 @@ export default function Flightresults(props) {
                   .split('T')[0].slice(2,4))}</span>
 
                   <span className="IATA-code-origin">{offer.slices[1].segments[0].origin.iata_city_code}</span>
-                  <i className="fas fa-plane-departure" style={{right: offer.slices[0].segments.length === 1 && "2.7rem"}}></i>
+                  <i className="fas fa-plane-departure"></i>
 
                   {/* cheaking if there is one stop two stops or no stops and creating the stop line for the return flight */}
                   {offer.slices[1].segments.length === 1 ?
