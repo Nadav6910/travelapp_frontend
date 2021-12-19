@@ -103,6 +103,7 @@ export default function Flightresults(props) {
           <Button className="return-to-search-btn" onClick={returnToSearch}>Back To Search</Button>
           {/* after getting back data from api showing the whole flight results section */}
             <div className="info-window" onAnimationEnd={CheckAnimationState} style={{display: !infoWindowOpen && 'none', animationName: infoWndowAnimation ? 'popup' : 'popdown'}}>
+                <span className="close-info-window" onClick={CloseInfoWindow}>X</span>
                 <p className="arrival-header">Arrival:<span className="arrival-info">{arrival}</span></p>
                 <p className="departure-header">Departure:<span className="departure-info">{departure}</span></p>
                 <p className="airport-header">Airport:<span className="airport-info">{airport}</span></p>
@@ -171,13 +172,13 @@ export default function Flightresults(props) {
 
                   offer.slices[0].segments.length === 2 ?
 
-                    <div className="vl" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div> :
+                    <div className="vl" onClick={OpenInfoWindow}></div> :
 
                   offer.slices[0].segments.length === 3 &&
 
                     <div className="vl-container">
-                      <div className="vl" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div>
-                      <div className="vl2" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div>
+                      <div className="vl" onClick={OpenInfoWindow}></div>
+                      <div className="vl2" onClick={OpenInfoWindow}></div>
                     </div>}
 
                   <hr className="flight-line" style={{height: '3px'}}/>
@@ -271,13 +272,13 @@ export default function Flightresults(props) {
 
                   offer.slices[1].segments.length === 2 ?
 
-                    <div className="vl" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div> :
+                    <div className="vl" onClick={OpenInfoWindow}></div> :
 
                   offer.slices[1].segments.length === 3 &&
 
                     <div className="vl-container">
-                      <div className="vl" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div>
-                      <div className="vl2" onMouseEnter={OpenInfoWindow} onMouseLeave={CloseInfoWindow}></div>
+                      <div className="vl" onClick={OpenInfoWindow}></div>
+                      <div className="vl2" onClick={OpenInfoWindow}></div>
                     </div>}
 
                   <hr className="flight-line" style={{height: '3px'}}/>

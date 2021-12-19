@@ -380,6 +380,14 @@ button.MuiButton-root.return-to-search-btn:hover{
     background-color: #5574c2;
 }
 
+.close-info-window{
+    display: inline-block;
+    position: absolute;
+    right: 90%;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 944px) {
     .MuiButton-root.search-btn{
