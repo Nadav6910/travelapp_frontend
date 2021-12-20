@@ -44,14 +44,14 @@ export default function Searchinput(props) {
             value={searchInputValueFrom} 
             className="search-input-from" 
             ref={fromRef} 
-            placeholder="From.."></input>
+            placeholder="From.." required></input>
             {searchInputValueFrom.length > 0 ? <i onClick={DeleteTextFrom} className="fas fa-times-circle"></i> : <i className="fas fa-plane-departure"></i>}
 
             <input onChange={e => SetSearchInputValueTo(e.target.value)} 
             value={searchInputValueTo} 
             className="search-input-to" 
             ref={toRef}
-            placeholder="To.."></input>
+            placeholder="To.." required></input>
             {searchInputValueTo.length > 0 ? <i onClick={DeleteTextTo} className="fas fa-times-circle"></i> : <i className="fas fa-plane-arrival" style={{'left': '-2px'}}></i>}
         </div>
         

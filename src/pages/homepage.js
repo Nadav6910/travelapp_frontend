@@ -14,6 +14,8 @@ function Homepage() {
 
     const [searchWidowOpen, SetSearchWidowOpen] = useState(true)
     const [flightOffersData, SetFlightOffersData] = useState([])
+    const [showShortSearchErr, SetShowShortSearchErr] = useState(false)
+    const [dateNotPickedErr, SetDateNotPickedErr] = useState(false)
     const [gotFlightData, setGotFlightData] = useState(false)
     const [NumberOfAdults, SetNumberOfAdults] = useState(2)
     // const [NumberOfChildren, SetNumberOfChildren] = useState(0)
@@ -38,36 +40,48 @@ function Homepage() {
 
     //getting back user inpt of chosen places from child commponent
     function GetPlaceValue(searchInputValueFrom, searchInputValueTo){
-      SetSearchInputValueFrom(searchInputValueFrom)
-      SetSearchInputValueTo(searchInputValueTo)
+        SetSearchInputValueFrom(searchInputValueFrom)
+        SetSearchInputValueTo(searchInputValueTo)
     }
 
     //sending user input to backend and getting back a flights offer response then setting it into state
     async function SendUserData(e){
       e.preventDefault()
-      SetSearchWidowOpen(false)
-      // 'http://localhost:4000/get-data'
-      // 'https://travelapp-1.herokuapp.com/get-data'
-      axios.post('https://travelapp-1.herokuapp.com/get-data', {
-        NumberOfAdults,
-        AgeOfChildArray,
-        StartDateInput,
-        EndDateInput,
-        searchInputValueFrom,
-        searchInputValueTo
-      })
-      .then(function(response) {
-        SetFlightOffersData(response.data.data.offers)
-        console.log(response.data);
-      })
-
-      .then(() => {
-        setGotFlightData(true)
-      })
-
-      .catch(function (error) {
-        console.log(error);
-      })
+      if (searchInputValueFrom.length < 3 || searchInputValueTo.length < 3) {
+        SetShowShortSearchErr(true)
+        setTimeout(() => SetShowShortSearchErr(false), 5000)
+      } else if(StartDateInput.length === 0 || EndDateInput === 0) {
+        SetDateNotPickedErr(true)
+        setTimeout(() => SetDateNotPickedErr(false), 5000)
+      } else {
+          SetSearchWidowOpen(false)
+          // 'http://localhost:4000/get-data'
+          // 'https://travelapp-1.herokuapp.com/get-data'
+          axios.post('http://localhost:4000/get-data', {
+            NumberOfAdults,
+            AgeOfChildArray,
+            StartDateInput,
+            EndDateInput,
+            searchInputValueFrom,
+            searchInputValueTo
+          })
+          .then(function(response) {
+            SetFlightOffersData(response.data.data.offers)
+            // if (response.data.message === 'Minimum required length of search term is 3 characters') {
+            //   SetShowShortSearchErr(true)
+            // } else {
+            //   SetFlightOffersData(response.data.data.offers)
+            // }
+          })
+    
+          .then(() => {
+            setGotFlightData(true)
+          })
+    
+          .catch(function (error) {
+            console.log(error);
+          })
+      }
     }
       
     return (
@@ -89,6 +103,14 @@ function Homepage() {
             </p>  
 
             <div className="user-flight-form">
+
+              <div className="search-err-mess" style={{"display": showShortSearchErr && "inline"}}>
+                <p>Please Enter More Then 3 Letters In Search</p>
+              </div>
+              <div className="search-err-mess" style={{"display": dateNotPickedErr && "inline"}}>
+                <p>Please Pick A Date</p>
+              </div>
+
               <form onSubmit={SendUserData} method="post">
                 <Searchinput GetPlaceValue={GetPlaceValue}/>
                 <DateRangePicker GetDateValues={GetDateValues}/>

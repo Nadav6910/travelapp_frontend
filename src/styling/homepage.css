@@ -388,6 +388,10 @@ button.MuiButton-root.return-to-search-btn:hover{
     cursor: pointer;
 }
 
+.search-err-mess{
+    color: red;
+    display: none;
+}
 
 @media screen and (max-width: 944px) {
     .MuiButton-root.search-btn{
