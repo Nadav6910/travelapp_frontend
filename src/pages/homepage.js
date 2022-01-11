@@ -16,6 +16,7 @@ function Homepage() {
     const [flightOffersData, SetFlightOffersData] = useState([])
     const [showShortSearchErr, SetShowShortSearchErr] = useState(false)
     const [dateNotPickedErr, SetDateNotPickedErr] = useState(false)
+    const [noResults, setNoResults] = useState(false)
     const [gotFlightData, setGotFlightData] = useState(false)
     const [NumberOfAdults, SetNumberOfAdults] = useState(2)
     // const [NumberOfChildren, SetNumberOfChildren] = useState(0)
@@ -66,12 +67,12 @@ function Homepage() {
             searchInputValueTo
           })
           .then(function(response) {
-            SetFlightOffersData(response.data.data.offers)
-            // if (response.data.message === 'Minimum required length of search term is 3 characters') {
-            //   SetShowShortSearchErr(true)
-            // } else {
-            //   SetFlightOffersData(response.data.data.offers)
-            // }
+            if (response.data === "could not find results for search") {
+                setGotFlightData(true)
+                setNoResults(true)
+            } else {
+              SetFlightOffersData(response.data.data.offers)
+            }
           })
     
           .then(() => {
@@ -122,7 +123,7 @@ function Homepage() {
         
           gotFlightData ? 
           
-          <Flightresults flightdata={flightOffersData}/> :
+          <><Flightresults flightdata={flightOffersData}/><div className="search-err-mess" style={{"display": noResults && "inline"}}><p>no results found</p></div></> :
 
            <Loading/>}
           

@@ -11,7 +11,11 @@ export default function Searchinput(props) {
 
    useEffect(() => {
      $.getJSON(`https://ipgeolocation.abstractapi.com/v1/?api_key=${process.env.REACT_APP_ABSTRACT_GEOLOCATION_API_KEY}`, function(data) {
-        SetSearchInputValueFrom(data.city + ', ' + data.country)})
+         if (data.country === "Israel") {
+            SetSearchInputValueFrom("tel aviv, israel")
+         } else {
+             SetSearchInputValueFrom(data.city + ', ' + data.country)
+         }})
     }, [])
 
     useEffect(() => {
