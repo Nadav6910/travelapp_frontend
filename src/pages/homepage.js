@@ -58,7 +58,7 @@ function Homepage() {
           SetSearchWidowOpen(false)
           // 'http://localhost:4000/get-data'
           // 'https://travelapp-1.herokuapp.com/get-data'
-          axios.post('http://localhost:4000/get-data', {
+          axios.post('https://travelapp-1.herokuapp.com/get-data', {
             NumberOfAdults,
             AgeOfChildArray,
             StartDateInput,
